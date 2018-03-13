@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:signavio="http://www.signavio.com" id="sid-422be94e-dfd5-483d-b725-41944d0f907a" targetNamespace="http://www.signavio.com" expressionLanguage="http://www.w3.org/TR/XPath" exporter="Camunda Modeler" exporterVersion="1.11.3" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+  <collaboration id="sid-6bc580bf-f663-44ac-b299-77c92c7960d5">
+    <extensionElements>
+      <signavio:signavioDiagramMetaData metaKey="prozessreifegrad" metaValue="" />
+      <signavio:signavioDiagramMetaData metaKey="iso9000ff" metaValue="" />
+      <signavio:signavioDiagramMetaData metaKey="processgoal" metaValue="" />
+      <signavio:signavioDiagramMetaData metaKey="meta-processowner" metaValue="" />
+      <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="74daef50fa984c69a91ef334ffa640b6" />
+    </extensionElements>
+    <participant id="sid-52397C19-ED4F-4033-BAC8-61136747F63B" name="Technician" processRef="sid-0D3E9B51-2C71-4868-98C0-B38603FEC132">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+      </extensionElements>
+    </participant>
+  </collaboration>
+  <process id="sid-0D3E9B51-2C71-4868-98C0-B38603FEC132" name="Technician" processType="None" isClosed="false" isExecutable="false">
+    <extensionElements />
+    <laneSet id="sid-23abedfd-6800-4ec4-9a5e-9593f6c7befa">
+      <lane id="sid-8EA1012B-3C19-4942-AB82-5F4F5ECF7D18">
+        <extensionElements>
+          <signavio:signavioMetaData metaKey="bgcolor" metaValue="" />
+          <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+        </extensionElements>
+        <flowNodeRef>sid-A96F30CE-8233-445F-BECB-7EB729D8D390</flowNodeRef>
+        <flowNodeRef>sid-8A091A73-C50E-4B46-A9C5-A874FF89D6A0</flowNodeRef>
+        <flowNodeRef>sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A</flowNodeRef>
+        <flowNodeRef>sid-D7505856-B905-4633-BF88-DF7485638835</flowNodeRef>
+        <flowNodeRef>sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464</flowNodeRef>
+      </lane>
+    </laneSet>
+    <startEvent id="sid-A96F30CE-8233-445F-BECB-7EB729D8D390" name="Photos are ready&#10; to be edited">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+        <signavio:signavioMetaData metaKey="vorgngerprozesse" metaValue="" />
+      </extensionElements>
+      <outgoing>sid-5CE881DC-A350-46F6-9419-06AE50D024E3</outgoing>
+    </startEvent>
+    <endEvent id="sid-8A091A73-C50E-4B46-A9C5-A874FF89D6A0" name="The photo gallery is done">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+        <signavio:signavioMetaData metaKey="nachfolgerprozesse" metaValue="" />
+        <signavio:signavioLabel ref="text_name" valign="middle" x="29.0" y="54.0" />
+      </extensionElements>
+      <incoming>sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1</incoming>
+    </endEvent>
+    <sequenceFlow id="sid-5CE881DC-A350-46F6-9419-06AE50D024E3" name="" sourceRef="sid-A96F30CE-8233-445F-BECB-7EB729D8D390" targetRef="sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-0C7151AE-030D-4E4A-8060-023ACE34AD23" name="" sourceRef="sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A" targetRef="sid-D7505856-B905-4633-BF88-DF7485638835">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4" name="" sourceRef="sid-D7505856-B905-4633-BF88-DF7485638835" targetRef="sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1" name="" sourceRef="sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464" targetRef="sid-8A091A73-C50E-4B46-A9C5-A874FF89D6A0">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A" name="Delete unusable photos" camunda:assignee="Bob">
+      <incoming>sid-5CE881DC-A350-46F6-9419-06AE50D024E3</incoming>
+      <outgoing>sid-0C7151AE-030D-4E4A-8060-023ACE34AD23</outgoing>
+    </userTask>
+    <userTask id="sid-D7505856-B905-4633-BF88-DF7485638835" name="Edit photos" camunda:assignee="Bob">
+      <incoming>sid-0C7151AE-030D-4E4A-8060-023ACE34AD23</incoming>
+      <outgoing>sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4</outgoing>
+    </userTask>
+    <userTask id="sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464" name="Prepare photo gallery" camunda:assignee="Bob">
+      <incoming>sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4</incoming>
+      <outgoing>sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1</outgoing>
+    </userTask>
+  </process>
+  <bpmndi:BPMNDiagram id="sid-3fb34fe4-3381-42eb-ae35-aef2d715c843">
+    <bpmndi:BPMNPlane id="sid-297e9b1e-60da-409e-9831-ed6957e91ffb" bpmnElement="sid-6bc580bf-f663-44ac-b299-77c92c7960d5">
+      <bpmndi:BPMNShape id="sid-52397C19-ED4F-4033-BAC8-61136747F63B_gui" bpmnElement="sid-52397C19-ED4F-4033-BAC8-61136747F63B" isHorizontal="true">
+        <omgdc:Bounds x="165" y="135" width="692" height="250" />
+        <bpmndi:BPMNLabel labelStyle="sid-0e5dca88-7751-433f-b01f-c09988e32450">
+          <omgdc:Bounds x="170" y="232.22856903076172" width="12" height="55.54286193847656" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-8EA1012B-3C19-4942-AB82-5F4F5ECF7D18_gui" bpmnElement="sid-8EA1012B-3C19-4942-AB82-5F4F5ECF7D18" isHorizontal="true">
+        <omgdc:Bounds x="195" y="135" width="662" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-A96F30CE-8233-445F-BECB-7EB729D8D390_gui" bpmnElement="sid-A96F30CE-8233-445F-BECB-7EB729D8D390">
+        <omgdc:Bounds x="225" y="245" width="30" height="30" />
+        <bpmndi:BPMNLabel labelStyle="sid-6a930211-0239-4b57-bc74-2f2be69bd82c">
+          <omgdc:Bounds x="197.57143020629883" y="277" width="84.85713958740234" height="22" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-8A091A73-C50E-4B46-A9C5-A874FF89D6A0_gui" bpmnElement="sid-8A091A73-C50E-4B46-A9C5-A874FF89D6A0">
+        <omgdc:Bounds x="735" y="246" width="28" height="28" />
+        <bpmndi:BPMNLabel labelStyle="sid-6a930211-0239-4b57-bc74-2f2be69bd82c">
+          <omgdc:Bounds x="705" y="279" width="88" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="sid-5CE881DC-A350-46F6-9419-06AE50D024E3_gui" bpmnElement="sid-5CE881DC-A350-46F6-9419-06AE50D024E3">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="254" y="260" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="300" y="260" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="232" y="235" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-0C7151AE-030D-4E4A-8060-023ACE34AD23_gui" bpmnElement="sid-0C7151AE-030D-4E4A-8060-023ACE34AD23">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="400" y="260" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="445" y="260" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="377.5" y="235" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4_gui" bpmnElement="sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="545" y="260" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="590" y="260" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="522.5" y="235" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1_gui" bpmnElement="sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1">
+        <omgdi:waypoint xsi:type="omgdc:Point" x="690" y="260" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="736" y="260" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="668" y="235" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1ewdsxi_di" bpmnElement="sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A">
+        <omgdc:Bounds x="300" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1pxsegc_di" bpmnElement="sid-D7505856-B905-4633-BF88-DF7485638835">
+        <omgdc:Bounds x="445" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0gym1bu_di" bpmnElement="sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464">
+        <omgdc:Bounds x="590" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="sid-6a930211-0239-4b57-bc74-2f2be69bd82c">
+      <omgdc:Font name="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="sid-0e5dca88-7751-433f-b01f-c09988e32450">
+      <omgdc:Font name="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</definitions>
