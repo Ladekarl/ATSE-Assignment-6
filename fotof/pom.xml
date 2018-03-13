@@ -4,7 +4,8 @@
   <artifactId>fotof</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
+
+  <!-- import Camunda BOM to ensure correct versions of Camunda projects -->
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -18,21 +19,44 @@
   </dependencyManagement>
 
   <dependencies>
+
+    <!-- Camunda engine dependency -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine</artifactId>
       <scope>provided</scope>
     </dependency>
 
+    <!-- Camunda cdi beans -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
+      <groupId>org.camunda.bpm</groupId>
+      <artifactId>camunda-engine-cdi</artifactId>
+    </dependency>
+
+    <!-- provides a default EjbProcessApplication -->
+    <dependency>
+      <groupId>org.camunda.bpm.javaee</groupId>
+      <artifactId>camunda-ejb-client</artifactId>
+    </dependency>
+
+    <!-- Java EE 7 Specification -->
+    <dependency>
+      <groupId>org.jboss.spec</groupId>
+      <artifactId>jboss-javaee-7.0</artifactId>
+      <version>1.0.3.Final</version>
+      <type>pom</type>
       <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>xalan</artifactId>
+          <groupId>xalan</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 
   <build>
+    <finalName>fotof</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
