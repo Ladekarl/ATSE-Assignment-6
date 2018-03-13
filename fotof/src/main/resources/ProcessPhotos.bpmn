@@ -7,6 +7,9 @@
       <signavio:signavioDiagramMetaData metaKey="processgoal" metaValue="" />
       <signavio:signavioDiagramMetaData metaKey="meta-processowner" metaValue="" />
       <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="74daef50fa984c69a91ef334ffa640b6" />
+      <camunda:properties>
+        <camunda:property name="isExecutable" value="true" />
+      </camunda:properties>
     </extensionElements>
     <participant id="sid-52397C19-ED4F-4033-BAC8-61136747F63B" name="Technician" processRef="sid-0D3E9B51-2C71-4868-98C0-B38603FEC132">
       <extensionElements>
@@ -15,7 +18,7 @@
       </extensionElements>
     </participant>
   </collaboration>
-  <process id="sid-0D3E9B51-2C71-4868-98C0-B38603FEC132" name="Technician" processType="None" isClosed="false" isExecutable="false">
+  <process id="sid-0D3E9B51-2C71-4868-98C0-B38603FEC132" name="Technician" processType="None" isClosed="false" isExecutable="true">
     <extensionElements />
     <laneSet id="sid-23abedfd-6800-4ec4-9a5e-9593f6c7befa">
       <lane id="sid-8EA1012B-3C19-4942-AB82-5F4F5ECF7D18">
@@ -68,14 +71,29 @@
       </extensionElements>
     </sequenceFlow>
     <userTask id="sid-356CF9C7-66FF-4FDF-B54D-350A755D9A0A" name="Delete unusable photos" camunda:assignee="Bob">
+      <extensionElements>
+        <camunda:properties>
+          <camunda:property name="isExecutable" value="true" />
+        </camunda:properties>
+      </extensionElements>
       <incoming>sid-5CE881DC-A350-46F6-9419-06AE50D024E3</incoming>
       <outgoing>sid-0C7151AE-030D-4E4A-8060-023ACE34AD23</outgoing>
     </userTask>
     <userTask id="sid-D7505856-B905-4633-BF88-DF7485638835" name="Edit photos" camunda:assignee="Bob">
+      <extensionElements>
+        <camunda:properties>
+          <camunda:property name="isExecutable" value="true" />
+        </camunda:properties>
+      </extensionElements>
       <incoming>sid-0C7151AE-030D-4E4A-8060-023ACE34AD23</incoming>
       <outgoing>sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4</outgoing>
     </userTask>
     <userTask id="sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464" name="Prepare photo gallery" camunda:assignee="Bob">
+      <extensionElements>
+        <camunda:properties>
+          <camunda:property name="isExecutable" value="true" />
+        </camunda:properties>
+      </extensionElements>
       <incoming>sid-F6892F7F-8907-40AF-8E49-DEB8C5F62FD4</incoming>
       <outgoing>sid-0F223E5E-AFCF-4510-A0BA-9B1BCBC4C9B1</outgoing>
     </userTask>
