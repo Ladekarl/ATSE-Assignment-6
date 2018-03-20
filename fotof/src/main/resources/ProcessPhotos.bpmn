@@ -33,7 +33,7 @@
         <flowNodeRef>sid-295A36D3-45EF-43A2-ACA9-3A95BADE1464</flowNodeRef>
       </lane>
     </laneSet>
-    <startEvent id="sid-A96F30CE-8233-445F-BECB-7EB729D8D390" name="Photos are ready&#10; to be edited">
+    <startEvent id="sid-A96F30CE-8233-445F-BECB-7EB729D8D390" name="Photos are ready&#10; to be edited" camunda:formKey="app:DeleteUnusablePhotos.jsf">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
