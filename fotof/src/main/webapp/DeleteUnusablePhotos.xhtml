@@ -17,9 +17,15 @@
     <h:body>
         <h1>Do you want to delete unused photos?</h1>
         <h:form id="submitForm">
-            <h:outputLabel>Delete Photo</h:outputLabel>
-            <h:selectBooleanCheckbox/><br/>
-            <h:commandButton id="submit_button" value="DeletePhoto" action="#{camundaTaskForm.completeTask()}" />
+            <h2>Select photos to delete</h2>
+            <br/>
+            <h:selectBooleanCheckbox/>
+            <h:graphicImage height="50" width="50" name="images/small-mario.png"/>
+            <br/>
+            <h:selectBooleanCheckbox/>
+            <h:graphicImage height="50" width="50" name="images/spongebob.png"/>
+            <br/>
+            <h:commandButton id="submit_button" value="Delete selected" action="#{camundaTaskForm.completeTask()}" />
         </h:form>
     </h:body>
 </f:view>
