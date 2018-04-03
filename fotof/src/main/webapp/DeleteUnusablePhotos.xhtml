@@ -9,7 +9,7 @@
         <!-- Start a new process instance. The Process Definition Key is read internally from
              request parameters and cached in the CDI conversation scope.
         -->
-        <f:event type="preRenderView" listener="#{camundaTaskForm.startProcessInstanceByKeyForm()}" />
+        <f:event type="preRenderView" listener="#{camundaTaskForm.startTaskForm()}" />
     </f:metadata>
     <h:head>
         <title>Delete Photos</title>
@@ -19,7 +19,7 @@
         <h:form id="submitForm">
             <h:outputLabel>Delete Photo</h:outputLabel>
             <h:selectBooleanCheckbox/><br/>
-            <h:commandButton id="submit_button" value="DeletePhoto" action="#{camundaTaskForm.completeProcessInstanceForm()}" />
+            <h:commandButton id="submit_button" value="DeletePhoto" action="#{camundaTaskForm.completeTask()}" />
         </h:form>
     </h:body>
 </f:view>
