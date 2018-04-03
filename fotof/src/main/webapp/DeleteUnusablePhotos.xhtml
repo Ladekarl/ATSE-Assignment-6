@@ -18,8 +18,7 @@
         <h1>Do you want to delete unused photos?</h1>
         <h:form id="submitForm">
             <h:outputLabel>Delete Photo</h:outputLabel>
-            <h:selectBooleanCheckbox value="#{approveOrderController.orderEntity.approved}"/><br/>
-
+            <h:selectBooleanCheckbox/><br/>
             <h:commandButton id="submit_button" value="DeletePhoto" action="#{camundaTaskForm.completeProcessInstanceForm()}" />
         </h:form>
     </h:body>
