@@ -59,7 +59,7 @@
       <incoming>sid-5CE881DC-A350-46F6-9419-06AE50D024E3</incoming>
       <outgoing>sid-0C7151AE-030D-4E4A-8060-023ACE34AD23</outgoing>
     </userTask>
-    <userTask id="sid-D7505856-B905-4633-BF88-DF7485638835" name="Edit photos" camunda:assignee="Bob">
+    <userTask id="sid-D7505856-B905-4633-BF88-DF7485638835" name="Edit photos" camunda:formKey="app:Booking.jsf" camunda:assignee="Bob">
       <extensionElements>
         <camunda:properties>
           <camunda:property name="isExecutable" value="true" />
