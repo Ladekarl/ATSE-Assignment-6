@@ -19,20 +19,19 @@
         <h:form id="submitForm">
             <br/>
             <h2>Please fill out the information below</h2>
-            First name: <input type="text" name="FirstName" value=""/>
+            First name: <br/> <input type="text" name="FirstName" value=""/>
             <br/>
-            Last name: <input type="text" name="LastName" value=""/>
+            Last name: <br/> <input type="text" name="LastName" value=""/>
             <br/>
-            Phone number: <input type="number" name="LastName" value=""/>
+            Phone number: <br/> <input type="number" name="LastName" value=""/>
             <br/>
-            E-mail:
-            <input type="email" name="email"/>
+            E-mail: <br/> <input type="email" name="email"/>
             <br/>
-            Date and time for booking
-            <input type="datetime-local" name="bdaytime"/>
+            Date and time for booking <br/> <input type="datetime-local" name="bookingtime"/>
             <br/>
-            Other comments: <input type="text" name="LastName" value=""/>
-            <h:commandButton id="submit_button" value="Perform booking" action="#{camundaTaskForm.completeTask()}" />
+            Other comments: <br/> <input type="text" name="LastName" value=""/>
+            <br/>
+            <h:commandButton id="submit_button" value="Boking" action="#{camundaTaskForm.completeTask()}" />
         </h:form>
     </h:body>
 </f:view>
