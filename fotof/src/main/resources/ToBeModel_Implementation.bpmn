@@ -292,21 +292,25 @@
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression">false</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1" name="Shooting &#10;on location" sourceRef="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8" targetRef="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression">false</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="sid-39448B43-E0B9-4E29-8844-D23DABCE676E" name="Shooting &#10;in studio" sourceRef="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8" targetRef="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="sid-140C1B5B-E80F-43EC-AC48-0F359AA551D6" name="Customer order received" sourceRef="sid-1F37CE01-12E3-4EC6-91F7-F501D8319B9A" targetRef="sid-20AE8703-EF6F-4910-969F-3ABCEC290DA2">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
     </sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="sid-56e15813-8c89-4238-b0e1-b4de109d50a3">
@@ -503,7 +507,7 @@
         <omgdi:waypoint xsi:type="omgdc:Point" x="1542.4229745294679" y="802" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="1950.5181714016287" y="802" />
         <bpmndi:BPMNLabel labelStyle="sid-ef8c6a60-8c57-4490-a388-d82712dc0fea">
-          <omgdc:Bounds x="1522.42250803114" y="316.2494603149051" width="12" height="134.2286376953125" />
+          <omgdc:Bounds x="1489" y="316" width="78" height="24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
