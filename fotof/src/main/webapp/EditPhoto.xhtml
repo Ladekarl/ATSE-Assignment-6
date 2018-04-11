@@ -17,7 +17,13 @@
     <h:body>
         <h1>EDIT ALL THE PHOTOS</h1>
         <h:form id="submitForm">
-
+            <br/>
+            <h:selectBooleanCheckbox/>
+            <h:graphicImage height="50" width="50" name="images/small-mario.png"/>
+            <br/>
+            <h:selectBooleanCheckbox/>
+            <h:graphicImage height="50" width="50" name="images/spongebob.png"/>
+            <br/>
             <h:commandButton id="submit_button" value="Complete your edits" action="#{camundaTaskForm.completeTask()}" />
         </h:form>
     </h:body>

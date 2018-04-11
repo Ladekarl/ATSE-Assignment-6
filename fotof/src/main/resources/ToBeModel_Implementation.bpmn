@@ -47,14 +47,14 @@
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
         <flowNodeRef>sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8</flowNodeRef>
-        <flowNodeRef>sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D</flowNodeRef>
-        <flowNodeRef>sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C</flowNodeRef>
         <flowNodeRef>sid-781DFF06-CB97-430D-A9A8-F1DA3E06A8DA</flowNodeRef>
         <flowNodeRef>sid-586B7214-8567-42D1-B539-9CF39FD2F757</flowNodeRef>
         <flowNodeRef>sid-1F37CE01-12E3-4EC6-91F7-F501D8319B9A</flowNodeRef>
         <flowNodeRef>sid-74834338-C924-408F-AEEE-A3238E3852C5</flowNodeRef>
         <flowNodeRef>sid-99FEBCDB-824C-4CBB-8150-F88E9AA455D1</flowNodeRef>
         <flowNodeRef>sid-1FA1A115-60B9-4D6E-B9E4-7DD1A4FCAF21</flowNodeRef>
+        <flowNodeRef>sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D</flowNodeRef>
+        <flowNodeRef>sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C</flowNodeRef>
         <flowNodeRef>sid-EEAA0131-F8A8-4356-9709-09A3C1FADE7D</flowNodeRef>
       </lane>
     </laneSet>
@@ -76,19 +76,6 @@
       <incoming>sid-CDFF6076-F11A-447B-AEC0-8737810A06CB</incoming>
       <outgoing>sid-87CEF596-259F-4CE0-AD89-4AD611BC0804</outgoing>
     </exclusiveGateway>
-    <task id="sid-333603B5-5529-4E23-B498-917B4E6BA04D" name="Handle payment">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
-        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
-        <signavio:signavioMetaData metaKey="risikenundkontrollen" metaValue="" />
-        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue="" />
-        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]" />
-      </extensionElements>
-      <incoming>sid-87CEF596-259F-4CE0-AD89-4AD611BC0804</incoming>
-      <outgoing>sid-155EA889-BD93-4748-8984-1C7C35307008</outgoing>
-    </task>
     <exclusiveGateway id="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8" name="" gatewayDirection="Diverging">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
@@ -98,32 +85,6 @@
       <outgoing>sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1</outgoing>
       <outgoing>sid-39448B43-E0B9-4E29-8844-D23DABCE676E</outgoing>
     </exclusiveGateway>
-    <task id="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D" name="Add 100 EUR no order fee">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
-        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
-        <signavio:signavioMetaData metaKey="risikenundkontrollen" metaValue="" />
-        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue="" />
-        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]" />
-      </extensionElements>
-      <incoming>sid-39448B43-E0B9-4E29-8844-D23DABCE676E</incoming>
-      <outgoing>sid-CCD3DA14-CF53-4E6C-8C42-892DA9E621A2</outgoing>
-    </task>
-    <task id="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C" name="Add 150 EUR no order fee">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
-        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
-        <signavio:signavioMetaData metaKey="risikenundkontrollen" metaValue="" />
-        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue="" />
-        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]" />
-        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]" />
-      </extensionElements>
-      <incoming>sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1</incoming>
-      <outgoing>sid-E8BD52E4-3127-4346-AC1A-150FA64CDE16</outgoing>
-    </task>
     <exclusiveGateway id="sid-781DFF06-CB97-430D-A9A8-F1DA3E06A8DA" name="" gatewayDirection="Converging">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
@@ -214,7 +175,7 @@
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
-      <conditionExpression xsi:type="tFormalExpression">${false}</conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression">${!inStudio}</conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1" name="Shooting &#10;on location" sourceRef="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8" targetRef="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C">
       <extensionElements>
@@ -232,7 +193,7 @@
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
-      <conditionExpression xsi:type="tFormalExpression">${true}</conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression">${inStudio}</conditionExpression>
     </sequenceFlow>
     <serviceTask id="sid-74834338-C924-408F-AEEE-A3238E3852C5" name="Assign photographer" camunda:expression="${fotoFBusinessLogic.persistRole(execution)}">
       <incoming>sid-00337837-CD27-4F86-8F5B-15FD0EDDCB25</incoming>
@@ -254,10 +215,22 @@
       <incoming>sid-140C1B5B-E80F-43EC-AC48-0F359AA551D6</incoming>
       <outgoing>sid-CDFF6076-F11A-447B-AEC0-8737810A06CB</outgoing>
     </userTask>
-    <task id="sid-EEAA0131-F8A8-4356-9709-09A3C1FADE7D" name="Delete photos from gallery">
+    <userTask id="sid-333603B5-5529-4E23-B498-917B4E6BA04D" name="Handle payment" camunda:candidateUsers="Customer Service">
+      <incoming>sid-87CEF596-259F-4CE0-AD89-4AD611BC0804</incoming>
+      <outgoing>sid-155EA889-BD93-4748-8984-1C7C35307008</outgoing>
+    </userTask>
+    <serviceTask id="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D" name="Add 100 EUR no order fee" camunda:expression="${fotoFBusinessLogic.add100EU(execution)}">
+      <incoming>sid-39448B43-E0B9-4E29-8844-D23DABCE676E</incoming>
+      <outgoing>sid-CCD3DA14-CF53-4E6C-8C42-892DA9E621A2</outgoing>
+    </serviceTask>
+    <serviceTask id="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C" name="Add 150 EUR no order fee" camunda:expression="${fotoFBusinessLogic.add150EU(execution)}">
+      <incoming>sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1</incoming>
+      <outgoing>sid-E8BD52E4-3127-4346-AC1A-150FA64CDE16</outgoing>
+    </serviceTask>
+    <serviceTask id="sid-EEAA0131-F8A8-4356-9709-09A3C1FADE7D" name="Delete photos from gallery" camunda:expression="${fotoFBusinessLogic.deletePhotos(execution)}">
       <incoming>sid-F0EEE409-5A33-40DF-80E6-351C833BDD85</incoming>
       <outgoing>sid-8E1D400B-40A8-4214-97A0-AC05F2E07502</outgoing>
-    </task>
+    </serviceTask>
   </process>
   <bpmndi:BPMNDiagram id="sid-56e15813-8c89-4238-b0e1-b4de109d50a3">
     <bpmndi:BPMNPlane id="sid-f066cdb2-e4dd-4c93-a097-bff191e280b9" bpmnElement="sid-3f904d71-9584-4cd5-8486-78e2096a7e91">
@@ -300,26 +273,8 @@
       <bpmndi:BPMNShape id="sid-18DB8E1B-80C5-48A2-B49C-8E55DF4BB039_gui" bpmnElement="sid-18DB8E1B-80C5-48A2-B49C-8E55DF4BB039" isMarkerVisible="true">
         <omgdc:Bounds x="2320.491624159501" y="1040.9999844878914" width="40" height="40" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="sid-333603B5-5529-4E23-B498-917B4E6BA04D_gui" bpmnElement="sid-333603B5-5529-4E23-B498-917B4E6BA04D">
-        <omgdc:Bounds x="2407.491588285081" y="1021" width="100" height="80" />
-        <bpmndi:BPMNLabel labelStyle="sid-c25430db-d8a9-4609-aaf8-f9b15a00227d">
-          <omgdc:Bounds x="2413.905879666917" y="1053" width="87.17141723632812" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8_gui" bpmnElement="sid-355DCD69-70F7-4C77-8EAC-987A2BD63DE8" isMarkerVisible="true">
         <omgdc:Bounds x="1865.5181714016287" y="268.2494634154782" width="40" height="40" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D_gui" bpmnElement="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D">
-        <omgdc:Bounds x="1950.5181714016287" y="173.2872963393046" width="100" height="80" />
-        <bpmndi:BPMNLabel labelStyle="sid-c25430db-d8a9-4609-aaf8-f9b15a00227d">
-          <omgdc:Bounds x="1955.389600844988" y="199.2872963393046" width="90.25714111328125" height="24" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C_gui" bpmnElement="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C">
-        <omgdc:Bounds x="1950.5181714016287" y="323.2116304916518" width="100" height="79.99999999999989" />
-        <bpmndi:BPMNLabel labelStyle="sid-c25430db-d8a9-4609-aaf8-f9b15a00227d">
-          <omgdc:Bounds x="1955.389600844988" y="349.2116304916518" width="90.25714111328125" height="24" />
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="sid-781DFF06-CB97-430D-A9A8-F1DA3E06A8DA_gui" bpmnElement="sid-781DFF06-CB97-430D-A9A8-F1DA3E06A8DA" isMarkerVisible="true">
         <omgdc:Bounds x="2095.5181714016285" y="266.1247317077391" width="40" height="40" />
@@ -342,14 +297,20 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-CCD3DA14-CF53-4E6C-8C42-892DA9E621A2_gui" bpmnElement="sid-CCD3DA14-CF53-4E6C-8C42-892DA9E621A2">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2050.5181714016285" y="213.2872963393046" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2051" y="213" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="2116.018171401628" y="213.2872963393046" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2116.0181714016285" y="266.1247317077391" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2116" y="266" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2038.509085700814" y="188.1436481696523" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-E8BD52E4-3127-4346-AC1A-150FA64CDE16_gui" bpmnElement="sid-E8BD52E4-3127-4346-AC1A-150FA64CDE16">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2050.5181714016285" y="363.21163049165176" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2051" y="363" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="2116.018171401628" y="363.21163049165176" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2116.0181714016285" y="306.1247317077391" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2116" y="306" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2038.509085700814" y="338.10581524582585" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-F0EEE409-5A33-40DF-80E6-351C833BDD85_gui" bpmnElement="sid-F0EEE409-5A33-40DF-80E6-351C833BDD85">
         <omgdi:waypoint xsi:type="omgdc:Point" x="2135" y="287" />
@@ -374,12 +335,18 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-87CEF596-259F-4CE0-AD89-4AD611BC0804_gui" bpmnElement="sid-87CEF596-259F-4CE0-AD89-4AD611BC0804">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2360.491624159501" y="1061.4162960714436" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2407.491588285081" y="1061.2145856831992" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2359" y="1062" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2407" y="1061" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2338" y="1036.5" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-155EA889-BD93-4748-8984-1C7C35307008_gui" bpmnElement="sid-155EA889-BD93-4748-8984-1C7C35307008">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2507.491588285081" y="1061" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="2577.8122065520074" y="1061" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2507" y="1061" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="2579" y="1061" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2498" y="1036" width="90" height="20" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-919ADA2F-2C36-4010-8AE1-D3E6252648CD_gui" bpmnElement="sid-919ADA2F-2C36-4010-8AE1-D3E6252648CD">
         <omgdi:waypoint xsi:type="omgdc:Point" x="892" y="543" />
@@ -421,19 +388,19 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1_gui" bpmnElement="sid-E4A8F1D9-5F04-4FDA-9E89-047C8864B0F1">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="1886.0181714016287" y="308.2494634154782" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1886" y="308" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="1886.0181714016287" y="363.21163049165176" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="1950.5181714016287" y="363.21163049165176" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1951" y="363" />
         <bpmndi:BPMNLabel labelStyle="sid-ef8c6a60-8c57-4490-a388-d82712dc0fea">
-          <omgdc:Bounds x="1854.0177009060724" y="316.2496904811694" width="24" height="59.4000244140625" />
+          <omgdc:Bounds x="1837.9883595366844" y="315.8467691611213" width="56" height="24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-39448B43-E0B9-4E29-8844-D23DABCE676E_gui" bpmnElement="sid-39448B43-E0B9-4E29-8844-D23DABCE676E">
-        <omgdi:waypoint xsi:type="omgdc:Point" x="1886.0181714016287" y="268.2494634154782" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1886" y="268" />
         <omgdi:waypoint xsi:type="omgdc:Point" x="1886.0181714016287" y="213.2872963393046" />
-        <omgdi:waypoint xsi:type="omgdc:Point" x="1950.5181714016287" y="213.2872963393046" />
+        <omgdi:waypoint xsi:type="omgdc:Point" x="1951" y="213" />
         <bpmndi:BPMNLabel labelStyle="sid-ef8c6a60-8c57-4490-a388-d82712dc0fea">
-          <omgdc:Bounds x="1854.0177009060724" y="210.8782305202319" width="24" height="49.3714599609375" />
+          <omgdc:Bounds x="1843.9967898959897" y="210.94943332798917" width="45" height="24" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="sid-140C1B5B-E80F-43EC-AC48-0F359AA551D6_gui" bpmnElement="sid-140C1B5B-E80F-43EC-AC48-0F359AA551D6">
@@ -459,7 +426,16 @@
       <bpmndi:BPMNShape id="UserTask_14zkt7a_di" bpmnElement="sid-20AE8703-EF6F-4910-969F-3ABCEC290DA2">
         <omgdc:Bounds x="1951" y="762" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0n4hw1h_di" bpmnElement="sid-EEAA0131-F8A8-4356-9709-09A3C1FADE7D">
+      <bpmndi:BPMNShape id="UserTask_1h6jiu7_di" bpmnElement="sid-333603B5-5529-4E23-B498-917B4E6BA04D">
+        <omgdc:Bounds x="2407" y="1021" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_0tm35gy_di" bpmnElement="sid-8855AC2A-2D3D-41C4-BF63-A6DB7CB55C3D">
+        <omgdc:Bounds x="1951" y="173" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_09r0126_di" bpmnElement="sid-ACF6B13F-13FC-420B-B46C-6AFC52A48D2C">
+        <omgdc:Bounds x="1951" y="323" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_06srmaa_di" bpmnElement="sid-EEAA0131-F8A8-4356-9709-09A3C1FADE7D">
         <omgdc:Bounds x="2181" y="246" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
