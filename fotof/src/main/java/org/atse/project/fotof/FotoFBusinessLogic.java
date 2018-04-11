@@ -1,12 +1,16 @@
 package org.atse.project.fotof;
 
+import org.camunda.bpm.engine.RuntimeService;
+import org.camunda.bpm.engine.cdi.jsf.TaskForm;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.identity.User;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -18,6 +22,7 @@ public class FotoFBusinessLogic {
   // Inject the entity manager
   @PersistenceContext
   private EntityManager entityManager;
+
 
   public void persistRole(DelegateExecution delegateExecution) {
     RoleEntity roleEntity = new RoleEntity();
@@ -39,5 +44,18 @@ public class FotoFBusinessLogic {
   public void receiveOrder(DelegateExecution delegateExecution){
 
   }
+
+  public void add100EU(DelegateExecution delegateExecution){
+
+  }
+
+  public void add150EU(DelegateExecution delegateExecution){
+
+  }
+
+  public void  deletePhotos(DelegateExecution delegateExecution){
+
+  }
+
 
 }
