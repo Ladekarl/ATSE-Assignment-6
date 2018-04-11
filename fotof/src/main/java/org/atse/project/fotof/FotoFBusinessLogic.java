@@ -13,7 +13,7 @@ import java.util.Random;
 
 @Stateless
 @Named
-public class RoleBusinessLogic {
+public class FotoFBusinessLogic {
 
   // Inject the entity manager
   @PersistenceContext
@@ -30,6 +30,14 @@ public class RoleBusinessLogic {
     entityManager.flush();
     variables.put("role", user.getId());
     delegateExecution.setVariable("role", roleEntity.getRole());
+  }
+
+  public void notifyCustomer(DelegateExecution delegateExecution){
+
+  }
+
+  public void receiveOrder(DelegateExecution delegateExecution){
+
   }
 
 }
