@@ -199,7 +199,7 @@
       <incoming>sid-00337837-CD27-4F86-8F5B-15FD0EDDCB25</incoming>
       <outgoing>sid-296F71F0-C9A5-4F6C-8EC5-C641ED2EFEBD</outgoing>
     </serviceTask>
-    <userTask id="sid-D8BE171D-86A0-41B6-82C0-A7BF7990B189" name="Perform photo session" camunda:assignee="${role}">
+    <userTask id="sid-D8BE171D-86A0-41B6-82C0-A7BF7990B189" name="Perform photo session" camunda:assignee="${role}" camunda:candidateGroups="photographer">
       <incoming>sid-296F71F0-C9A5-4F6C-8EC5-C641ED2EFEBD</incoming>
       <outgoing>sid-919ADA2F-2C36-4010-8AE1-D3E6252648CD</outgoing>
     </userTask>
@@ -211,11 +211,11 @@
       <incoming>sid-20B08ECC-949B-4696-8834-2F6DC712FA77</incoming>
       <outgoing>sid-648CF397-3156-479F-B288-D176D1EF3573</outgoing>
     </serviceTask>
-    <userTask id="sid-20AE8703-EF6F-4910-969F-3ABCEC290DA2" name="Additional editing and printing" camunda:formKey="app:EditPhoto.jsf">
+    <userTask id="sid-20AE8703-EF6F-4910-969F-3ABCEC290DA2" name="Additional editing and printing" camunda:formKey="app:EditPhoto.jsf" camunda:candidateGroups="technician">
       <incoming>sid-140C1B5B-E80F-43EC-AC48-0F359AA551D6</incoming>
       <outgoing>sid-CDFF6076-F11A-447B-AEC0-8737810A06CB</outgoing>
     </userTask>
-    <userTask id="sid-333603B5-5529-4E23-B498-917B4E6BA04D" name="Handle payment" camunda:candidateUsers="Customer Service">
+    <userTask id="sid-333603B5-5529-4E23-B498-917B4E6BA04D" name="Handle payment" camunda:candidateGroups="csr">
       <incoming>sid-87CEF596-259F-4CE0-AD89-4AD611BC0804</incoming>
       <outgoing>sid-155EA889-BD93-4748-8984-1C7C35307008</outgoing>
     </userTask>
